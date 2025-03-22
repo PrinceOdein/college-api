@@ -6,7 +6,7 @@ import { readFileSync } from 'fs';
 import { join } from 'path';
 
 // Load the GraphQL schema from schema.graphql
-const typeDefs = readFileSync(join(process.cwd(), 'schema.graphql'), 'utf8');
+const typeDefs = readFileSync(join(process.cwd(), 'schema.gql'), 'utf8');
 
 const server = new ApolloServer({
   typeDefs,
