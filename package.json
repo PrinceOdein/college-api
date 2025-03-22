@@ -17,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/PrinceOdein/college-api/issues"
   },
-  "homepage": "https://github.com/PrinceOdein/college-api#readme"
+  "homepage": "https://github.com/PrinceOdein/college-api#readme",
+  "dependencies": {
+    "@apollo/server": "^4.11.3",
+    "graphql": "^16.10.0"
+  }
 }
