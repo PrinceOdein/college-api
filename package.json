@@ -20,6 +20,7 @@
   "homepage": "https://github.com/PrinceOdein/college-api#readme",
   "dependencies": {
     "@apollo/server": "^4.11.3",
+    "college-api": "file:",
     "graphql": "^16.10.0"
   },
   "devDependencies": {
