@@ -1,0 +1,21 @@
+type Room {
+  id: ID!
+  roomNumber: String!
+  capacity: Int!
+  occupied: Boolean!
+  students: [Student!]!
+}
+
+input CreateRoomInput {
+  roomNumber: String!
+  capacity: Int!
+}
+
+extend type Query {
+  rooms: [Room!]!
+  room(id: ID!): Room
+}
+
+extend type Mutation {
+  createRoom(input: CreateRoomInput!): Room!
+}

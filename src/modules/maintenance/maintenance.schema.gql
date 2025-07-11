@@ -1,0 +1,22 @@
+type MaintenanceRequest {
+  id: ID!
+  student: Student!
+  room: Room!
+  issue: String!
+  status: String!
+}
+
+input CreateMaintenanceRequestInput {
+  studentId: ID!
+  roomId: ID!
+  issue: String!
+}
+
+extend type Query {
+  maintenanceRequests: [MaintenanceRequest!]!
+}
+
+extend type Mutation {
+  createMaintenanceRequest(input: CreateMaintenanceRequestInput!): MaintenanceRequest!
+  updateMaintenanceRequestStatus(id: ID!, status: String!): MaintenanceRequest!
+}
