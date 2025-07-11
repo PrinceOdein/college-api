@@ -1,4 +1,5 @@
 import { ApolloServer } from '@apollo/server';
+import { config } from './config.js';
 import { startStandaloneServer } from '@apollo/server/standalone';
 import { readFileSync } from 'fs';
 import { join } from 'path';
@@ -23,6 +24,6 @@ const resolvers = merge.all([
 ]);
 
 const server = new ApolloServer({ typeDefs, resolvers, introspection: true });
-const { url } = await startStandaloneServer(server, { listen: { port: 4000 } });
+const { url } = await startStandaloneServer(server, { listen: { port: config.port } });
 
 console.log(`Server is running at ${url}`);
